@@ -7,6 +7,10 @@
 @model FreelancerViewModel
 
 @{
+    ViewData["Title"] = "Perfil";
+}
+
+@{
     var user = await userManager.GetUserAsync(this.User);
 }
 

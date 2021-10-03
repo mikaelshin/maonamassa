@@ -92,7 +92,7 @@
 
             [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Required")]
             [DataType(DataType.Password)]
-            [Display(Name = "Confirme a senha")]
+            [Display(Name = "Confirme a Senha")]
             [Compare("Password", ErrorMessage = "As senhas não estão iguais.")]
             public string ConfirmPassword { get; set; }
         }
