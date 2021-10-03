@@ -27,7 +27,7 @@
                     LastName = "Kostadinov",
                     UserName = "tonsan1",
                     Email = "admin@admin.com",
-                    Location = Country.BG,
+                    //Location = Country.BG,
                     ProfileImageUrl = "https://res.cloudinary.com/MaoNaMassa/image/upload/v1627979027/user-avatar-placeholder_kkhpst.png",
                     PasswordHash = "AQAAAAEAACcQAAAAEDA3keU3XOYGRZfBy6pngk7PctiHTucDSZmw6f6gNHKes6pf7jhXeZiWVZftf1mR7Q==",
                 };
