@@ -11,6 +11,7 @@
     using MaoNaMassa.Common;
     using MaoNaMassa.Data.Models;
     using MaoNaMassa.Services.Interfaces;
+    using MaoNaMassa.Web.Properties;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
@@ -54,27 +55,27 @@
 
         public class InputModel
         {
-            [Required]
+            [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Required")]
             [Range(0, 1, ErrorMessage = "Tipo de usuário não válido.")]
             public UserType UserType { get; set; }
 
-            [Required]
+            [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Required")]
             [StringLength(25, MinimumLength = 3, ErrorMessage = "O campo {0} deve conter de {2} a {1} caracteres.")]
-            [Display(Name = "First Name")]
+            [Display(Name = "Nome")]
             public string FirstName { get; set; }
 
-            [Required]
+            [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Required")]
             [StringLength(25, MinimumLength = 3, ErrorMessage = "O campo {0} deve conter de {2} a {1} caracteres.")]
-            [Display(Name = "Last Name")]
+            [Display(Name = "Sobrenome")]
             public string LastName { get; set; }
 
-            [Required]
+            [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Required")]
             [StringLength(25, MinimumLength = 3, ErrorMessage = "O campo {0} deve conter de {2} a {1} caracteres.")]
-            [Display(Name = "Username")]
+            [Display(Name = "Usuário")]
             public string Username { get; set; }
 
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Required")]
+            [EmailAddress(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Email")]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
@@ -83,12 +84,13 @@
             //[Display(Name = "Location")]
             //public Country Location { get; set; }
 
-            [Required]
+            [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Required")]
             [StringLength(100, ErrorMessage = "O campo {0} deve conter de {2} a {1} caracteres.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Senha")]
             public string Password { get; set; }
 
+            [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Required")]
             [DataType(DataType.Password)]
             [Display(Name = "Confirme a senha")]
             [Compare("Password", ErrorMessage = "As senhas não estão iguais.")]

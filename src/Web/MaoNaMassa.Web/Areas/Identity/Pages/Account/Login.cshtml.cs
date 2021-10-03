@@ -6,6 +6,7 @@
     using System.Threading.Tasks;
 
     using MaoNaMassa.Data.Models;
+    using MaoNaMassa.Web.Properties;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
@@ -44,19 +45,19 @@
 
         public class InputModel
         {
-            [Required]
-            [Display(Name = "Username")]
+            [Required(ErrorMessageResourceType = typeof(Resources),ErrorMessageResourceName = "Required")]
+            [Display(Name = "Usuário")]
             public string Username { get; set; }
 
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Required")]
+            [EmailAddress(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Email")]
             public string Email { get; set; }
 
-            [Required]
-            [DataType(DataType.Password)]
+            [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Required")]
+            [Display (Name = "Senha")]
             public string Password { get; set; }
 
-            [Display(Name = "Remember me?")]
+            [Display(Name = "Salvar Log In?")]
             public bool RememberMe { get; set; }
         }
 
