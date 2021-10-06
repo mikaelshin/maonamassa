@@ -5,7 +5,9 @@
 @inject SignInManager<ApplicationUser> signInManager
 @inject UserManager<ApplicationUser> userManager
 @model EmployerViewModel
-
+@{
+    ViewData["Title"] = "Perfil";
+}
 @{
     var user = await userManager.GetUserAsync(this.User);
 }

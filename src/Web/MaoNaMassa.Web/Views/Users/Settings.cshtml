@@ -1,4 +1,7 @@
 ﻿@using MaoNaMassa.Common
+@{
+    ViewData["Title"] = "Configurações";
+}
 @model MaoNaMassa.Web.ViewModels.Users.UserSettingsViewModel
     <!-- Dashboard Container -->
 <div class="dashboard-container">
@@ -166,7 +169,7 @@
 
                                     <div class="col-xl-4">
                                         <div class="submit-field">
-                                            <h5>Repita a Nova Senha</h5>
+                                            <h5>Confirme a Nova Senha</h5>
                                             <input asp-for="UserPasswordInputModel.RepeatNewPassword" type="password" class="with-border">
                                             <span asp-validation-for="UserPasswordInputModel.RepeatNewPassword" class="text-danger"></span>
                                         </div>
