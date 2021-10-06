@@ -49,9 +49,9 @@
             [Display(Name = "Usuário")]
             public string Username { get; set; }
 
-            [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Required")]
-            [EmailAddress(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Email")]
-            public string Email { get; set; }
+            //[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Required")]
+            //[EmailAddress(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Email")]
+            //public string Email { get; set; }
 
             [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Required")]
             [Display (Name = "Senha")]

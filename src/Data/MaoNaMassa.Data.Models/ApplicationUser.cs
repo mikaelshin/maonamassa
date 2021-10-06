@@ -25,7 +25,7 @@ namespace MaoNaMassa.Data.Models
         [MaxLength(4096)]
         public string Description { get; set; }
 
-        //public Country Location { get; set; }
+        public Country Location { get; set; }
 
         public string ProfileImageUrl { get; set; }
 
