@@ -80,7 +80,7 @@
                 @if (Model.OpenJobs.Count > 0)
                 {
                     <div class="boxed-list-headline">
-                        <h3><i class="icon-material-outline-business-center"></i> @Model.OpenJobs.Count Trabalhos em Aberto</h3>
+                        <h3><i class="icon-material-outline-business-center"></i> @Model.OpenJobs.Count Trabalho(s) em Aberto</h3>
                     </div>
 
                     <div class="listings-container compact-list-layout">
@@ -101,7 +101,7 @@
                                             <ul>
                                                 @*<li><i class="icon-material-outline-location-on"></i> @job.LocationToString</li>*@
                                                 <li><i class="icon-material-outline-business-center"></i> @job.CategoryName</li>
-                                                <li><i class="icon-material-outline-access-time"></i>Posted @job.DateFormatted</li>
+                                                <li><i class="icon-material-outline-access-time"></i>Publicado em @job.CreatedOn.ToLongDateString()</li>
                                             </ul>
                                         </div>
                                     </div>
