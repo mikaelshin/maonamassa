@@ -21,7 +21,7 @@
                 <div class="col-md-12">
                     <div class="banner-headline">
                         <h3>
-                            <span>A plataforma <strong>Mão<strong class="color">Na</strong>Massa</strong> te ajuda a conectar com vários empregadores para que você consiga um trabalho!</span>
+                            <span>A plataforma <strong class="color">MãoNaMassa</strong> te ajuda a conectar com vários empregadores para que você consiga um trabalho!</span>
                         </h3>
                     </div>
                 </div>
@@ -32,12 +32,12 @@
         <div class="row">
             <div class="col-md-12">
                 <ul class="intro-stats margin-top-45 hide-under-992px">
-                    @* Comentando para próxima entrega
                     <li>
                         <strong class="counter">@Model.JobsCount</strong>
                         <span>Trabalhos Publicados</span>
                     </li>
-                    <li>
+                    @*Comentando para próxima entrega*@
+                    @*<li>
                         <strong class="counter">@Model.OffersCount</strong>
                         <span>Ofertas</span>
                     </li>*@
@@ -91,7 +91,7 @@
                                 <div class="icon-box-check"><i class="icon-material-outline-check"></i></div>
                             </div>
                         </div>
-                        <h3>Publique um Trabalho ou Envie uma Oferta</h3>
+                        <h3>Publique um Trabalho ou <br/>Envie uma Oferta</h3>
                         <p>Dependendo da conta criada, você tem a possibilidade de publicar trabalhos ou enviar ofertas.</p>
                     </div>
                 </div>
@@ -193,47 +193,45 @@ else
                     <div class="col-xl-12">
 
                         <!-- Section Headline -->
-                        <div class="section-headline margin-top-0 margin-bottom-35">
+                        @*<div class="section-headline margin-top-0 margin-bottom-35">
                             <h3>Featured Jobs</h3>
                             <a asp-action="All" asp-controller="Jobs" class="headline-link">Browse All Jobs</a>
+                        </div>*@
+
+                        @* Comentando para a próxima entrega
+                        <div class="section-headline margin-top-0 margin-bottom-35">
+                            <h3>Trabalhos Publicados</h3>
+                            <a asp-action="All" asp-controller="Jobs" class="headline-link">Procurar Mais</a>
                         </div>
 
-                        <!-- Jobs Container -->
+                        
                         <div class="listings-container compact-list-layout margin-top-35">
                             @foreach (var job in Model.Jobs)
                             {
-                                <!-- Job Listing -->
                                 <a asp-action="Index" asp-controller="Jobs" asp-route-id="@job.Id" class="job-listing with-apply-button">
 
-                                    <!-- Job Listing Details -->
                                     <div class="job-listing-details">
 
-                                        <!-- Logo -->
                                         <div class="job-listing-company-logo">
                                             <img src="@job.EmployerProfileImageUrl" alt="">
                                         </div>
 
-                                        <!-- Details -->
                                         <div class="job-listing-description">
                                             <h3 class="job-listing-title">@job.Title</h3>
 
-                                            <!-- Job Listing Footer -->
                                             <div class="job-listing-footer">
                                                 <ul>
                                                     <li><i class="icon-material-outline-business"></i> @job.EmployerFirstName @job.EmployerLastName</li>
-                                                    @*<li><i class="icon-material-outline-location-on"></i> @job.EmployerLocationToString</li>*@
                                                     <li><i class="icon-material-outline-business-center"></i> @job.CategoryName</li>
-                                                    <li><i class="icon-material-outline-access-time"></i>Posted @job.TimeAgo</li>
+                                                    <li><i class="icon-material-outline-access-time"></i>Publicado em @job.CreatedOn.ToLongDateString()</li>
                                                 </ul>
                                             </div>
                                         </div>
 
-                                        <!-- Apply Button -->
-                                        <span class="list-apply-button ripple-effect">Apply Now</span>
+                                        <span class="list-apply-button ripple-effect">Ver Mais</span>
                                     </div>
-                                </a>
-                            }
-                        </div>
+                                </a>}
+                        </div>*@
                         <!-- Jobs Container / End -->
                     </div>
                 </div>
