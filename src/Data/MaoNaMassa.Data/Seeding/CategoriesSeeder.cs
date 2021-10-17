@@ -10,15 +10,15 @@
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         {
-            await SeedCategory(dbContext, "Accounting & Consulting");
-            await SeedCategory(dbContext, "Data Science & Analytics");
-            await SeedCategory(dbContext, "Design & Creative");
-            await SeedCategory(dbContext, "Engineering & Architecture");
-            await SeedCategory(dbContext, "IT & Networking");
-            await SeedCategory(dbContext, "Sales & Marketing");
-            await SeedCategory(dbContext, "Translation");
-            await SeedCategory(dbContext, "Software Development");
-            await SeedCategory(dbContext, "Writing");
+            //await SeedCategory(dbContext, "Accounting & Consulting");
+            //await SeedCategory(dbContext, "Data Science & Analytics");
+            //await SeedCategory(dbContext, "Design & Creative");
+            //await SeedCategory(dbContext, "Engineering & Architecture");
+            //await SeedCategory(dbContext, "IT & Networking");
+            //await SeedCategory(dbContext, "Sales & Marketing");
+            //await SeedCategory(dbContext, "Translation");
+            //await SeedCategory(dbContext, "Software Development");
+            //await SeedCategory(dbContext, "Writing");
         }
 
         private static async Task SeedCategory(ApplicationDbContext db, string categoryName)

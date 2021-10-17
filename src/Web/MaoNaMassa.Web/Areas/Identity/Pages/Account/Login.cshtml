@@ -18,24 +18,17 @@
                 </div>
 
                 <form id="login-form" method="post">
-                    @*<div asp-validation-summary="All" class="text-danger"></div>*@
-
+                    
+                    <span asp-validation-for="Input.Username" class="text-danger"></span>
                     <div class="input-with-icon-left">
                         <i class="icon-material-outline-account-circle"></i>
                         <input asp-for="Input.Username" type="text" class="input-text with-border" placeholder="Usuário" required />
-                        <span asp-validation-for="Input.Username" class="text-danger"></span>
                     </div>
 
-                    @*<div class="input-with-icon-left">
-                        <i class="icon-material-baseline-mail-outline"></i>
-                        <input asp-for="Input.Email" type="text" class="input-text with-border" placeholder="Email" required />
-                        <span asp-validation-for="Input.Email" class="text-danger"></span>
-                    </div>*@
-
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
                     <div class="input-with-icon-left">
                         <i class="icon-material-outline-lock"></i>
                         <input asp-for="Input.Password" type="password" class="input-text with-border" placeholder="Senha" required />
-                        <span asp-validation-for="Input.Password" class="text-danger"></span>
                     </div>
 
                 </form>
