@@ -14,9 +14,9 @@
 
         public string EmployerLastName { get; set; }
 
-        public Country EmployerLocation { get; set; }
+        //public Country EmployerLocation { get; set; }
 
-        public string EmployerLocationToString => this.EmployerLocation.GetAttribute<DisplayAttribute>().Name;
+        //public string EmployerLocationToString => this.EmployerLocation.GetAttribute<DisplayAttribute>().Name;
 
         public string EmployerProfileImageUrl { get; set; }
 

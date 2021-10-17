@@ -17,18 +17,18 @@
             <div class="sidebar-container">
                 <form id="search-query-form" method="get" asp-action="All" asp-controller="Jobs">
                     <!-- Sort by -->
-                    <div class="sidebar-widget">
-                        <h3>Sort by</h3>
+                    @*<div class="sidebar-widget">
+                        <h3>Ordenar por</h3>
                         <select asp-for="Sorting" class="location-select dropdown" asp-items="Html.GetEnumSelectList<Sorting>()" data-size="7">
                         </select>
-                    </div>
+                    </div>*@
 
                     <!-- Keywords -->
                     <div class="sidebar-widget">
-                        <h3>Job Title</h3>
+                        <h3>Título do Trabalho</h3>
                         <div class="keywords-container">
                             <div class="keyword-input-container">
-                                <input asp-for="JobTitle" type="text" class="keyword-input" placeholder="Search by job title" />
+                                <input asp-for="JobTitle" type="text" class="keyword-input" placeholder="Procurar por Título" />
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -36,9 +36,9 @@
 
                     <!-- Category -->
                     <div class="sidebar-widget">
-                        <h3>Category</h3>
+                        <h3>Categoria</h3>
                         <select asp-for="Category" class="location-select dropdown with-border" data-size="7">
-                            <option value="">Search by Category</option>
+                            <option value="">Procurar por Categoria</option>
                             @foreach (var category in Model.Categories)
                             {
                                 <option value="@category.Name">@category.Name</option>
@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="sidebar-widget d-flex justify-content-center">
-                        <button type="submit" form="search-query-form" class="button big ripple-effect w-100">Search</button>
+                        <button type="submit" form="search-query-form" class="button big ripple-effect w-100">Buscar</button>
                     </div>
                 </form>
             </div>
@@ -63,7 +63,7 @@
 
                 @if (Model.Jobs.Count() == 0)
                 {
-                    <h3 class="page-title">There are no jobs that match your criteria!</h3>
+                    <h3 class="page-title">Nenhum trabalho encontrado!</h3>
                 }
 
                 @foreach (var job in Model.Jobs)
@@ -87,7 +87,7 @@
                         <!-- Job Listing Footer -->
                         <div class="job-listing-footer">
                             <ul>
-                                <li><i class="icon-material-outline-location-on"></i> @job.EmployerLocationToString</li>
+                                <li>@*<i class="icon-material-outline-location-on"></i> @job.EmployerLocationToString*@</li>
                                 <li><i class="icon-material-outline-business-center"></i> @job.CategoryName</li>
                                 <li><i class="icon-material-outline-account-balance-wallet"></i> $@job.Budget.ToString("N0")</li>
                                 <li><i class="icon-material-outline-access-time"></i>Posted @job.TimeAgo</li>

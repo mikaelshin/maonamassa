@@ -3,7 +3,7 @@
 @model JobInputModel
 
 @{
-    ViewData["Title"] = "Add a Job";
+    ViewData["Title"] = "Adicionar Trabalho";
 
     var categories = Model.Categories.Select(category => new SelectListItem
     {
@@ -24,7 +24,7 @@
 
             <!-- Dashboard Headline -->
             <div class="dashboard-headline">
-                <h3>Add a Job</h3>
+                <h3>Adicionar Trabalho</h3>
             </div>
 
             <!-- Row -->
@@ -37,14 +37,14 @@
                         <form method="post" asp-action="AddJob" asp-controller="Jobs">
                             <!-- Headline -->
                             <div class="headline">
-                                <h3><i class="icon-feather-folder-plus"></i> Job Submission Form</h3>
+                                <h3><i class="icon-feather-folder-plus"></i> Formulário</h3>
                             </div>
 
                             <div class="content with-padding padding-bottom-10">
                                 <div class="row">
                                     <div class="col-xl-4">
                                         <div class="submit-field">
-                                            <h5>Job Title</h5>
+                                            <h5>Título</h5>
                                             <input asp-for="Title" type="text" class="with-border">
                                             <span asp-validation-for="Title" class="text-danger"></span>
                                         </div>
@@ -52,7 +52,7 @@
 
                                     <div class="col-xl-4">
                                         <div class="submit-field">
-                                            <h5>Job Category</h5>
+                                            <h5>Categoria</h5>
                                             <select asp-for="CategoryId" class="location-select dropdown with-border" asp-items="categories" data-size="7" title="Select Category">
                                             </select>
                                             <span asp-validation-for="CategoryId" class="text-danger"></span>
@@ -61,10 +61,10 @@
 
                                     <div class="col-xl-4">
                                         <div class="submit-field">
-                                            <h5>Budget</h5>
+                                            <h5>Preço</h5>
                                             <div class="input-with-icon">
                                                 <input asp-for="Budget" min="10" class="currency with-border" type="number" placeholder="Budget">
-                                                <i class="currency">USD</i>
+                                                <i class="currency">R$</i>
                                             </div>
                                             <span asp-validation-for="Budget" class="text-danger"></span>
                                         </div>
@@ -72,14 +72,14 @@
 
                                     <div class="col-xl-12">
                                         <div class="submit-field">
-                                            <h5>Job Description</h5>
+                                            <h5>Descrição</h5>
                                             <textarea asp-for="Description" cols="30" rows="5" class="with-border"></textarea>
                                             <span asp-validation-for="Description" class="text-danger"></span>
                                         </div>
                                     </div>
 
                                     <div class="col-xl-12">
-                                        <button asp-route="/Dashboard/Jobs/Add" type="submit" class="button ripple-effect big margin-top-30"><i class="icon-feather-plus"></i> Add a Job</button>
+                                        <button asp-route="/Dashboard/Jobs/Add" type="submit" class="button ripple-effect big margin-top-30"><i class="icon-feather-plus"></i> Adicionar</button>
                                     </div>
                                 </div>
                             </div>

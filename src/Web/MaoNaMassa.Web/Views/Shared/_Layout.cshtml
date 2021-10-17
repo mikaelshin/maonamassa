@@ -13,7 +13,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
+    <title>@this.ViewData["Title"]</title>
 
     <script src="~/js/jquery-3.6.0.min.js"></script>
     <script src="https://js.stripe.com/v3/"></script>
@@ -154,7 +154,7 @@
                                 </li>*@
 
                                 
-                                @*<li>
+                                <li>
                                     <a role="button">Trabalhos</a>
                                     <ul class="dropdown-nav">
                                         <li>
@@ -165,7 +165,7 @@
                                             <a asp-action="AddJob" asp-controller="Jobs">Adicionar Trabalho</a>
                                         </li>
                                     </ul>
-                                </li>*@
+                                </li>
                             }
                         </ul>
                     </nav>
@@ -183,7 +183,7 @@
                         var lastName = user.LastName;
                         var username = user.UserName;
                         var role = User.IsInRole("Freelancer") ? "Freelancer" :
-                            User.IsInRole("Employer") ? "Employer" :
+                            User.IsInRole("Employer") ? "Empregador" :
                                 "Administrator";
 
                         var onlineStatus = user.IsOnline ? "status-online" : "status-invisible";

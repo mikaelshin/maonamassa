@@ -27,7 +27,7 @@
                         <div class="header-image freelancer-avatar"><a asp-action="Employer" asp-controller="Users" asp-route-id="@Model.EmployerId"><img src="@Model.EmployerProfileImageUrl" alt=""></a></div>
                         <div class="header-details">
                             <h3>@Model.Title</h3>
-                            <h5>About the Employer</h5>
+                            <h5>Sobre o Empregador</h5>
                             <ul>
                                 <li><a asp-action="Employer" asp-controller="Users" asp-route-id="@Model.EmployerId"><i class="icon-material-outline-business"></i>@Model.EmployerFirstName @Model.EmployerLastName</a></li>
                                 <li>
@@ -37,7 +37,7 @@
                                     }
                                     else
                                     {
-                                        <span class="company-not-rated">Not rated yet</span>
+                                        <span class="company-not-rated">Sem Avaliação</span>
                                     }
                                 </li>
                                 @*<li><img class="flag" src="/images/flags/@(Model.EmployerLocation.ToString().ToLower()).svg" alt="">@Model.EmployerLocationToString</li>*@
@@ -46,8 +46,8 @@
                     </div>
                     <div class="right-side">
                         <div class="salary-box">
-                            <div class="salary-type">Budget</div>
-                            <div class="salary-amount">$@Model.Budget.ToString("N2")</div>
+                            <div class="salary-type">Valor</div>
+                            <div class="salary-amount">R$ @Model.Budget.ToString("N2")</div>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
         <!-- Content -->
         <div class="col-xl-8 col-lg-8 content-right-offset">
             <div class="single-page-section">
-                <h3 class="margin-bottom-25">Job Description</h3>
+                <h3 class="margin-bottom-25">Descrição do Trabalho</h3>
                 <p>@Model.Description</p>
             </div>
             
@@ -83,7 +83,7 @@
                     }
                     else if (Model.Status == JobStatus.Open && !Model.OffersFreelancerIds.Contains(user.Id))
                     {
-                        <a href="#small-dialog" class="apply-now-button popup-with-zoom-anim">Make an Offer<i class="icon-material-outline-arrow-right-alt"></i></a>
+                        <a href="#small-dialog" class="apply-now-button popup-with-zoom-anim">Faça uma Oferta!<i class="icon-material-outline-arrow-right-alt"></i></a>
                     }
                     else if (Model.Status == JobStatus.Open && Model.OffersFreelancerIds.Contains(user.Id))
                     {
@@ -103,7 +103,7 @@
                     }
                     else if (Model.Status != JobStatus.InContract && Model.EmployerId == user.Id)
                     {
-                        <a asp-action="MyJobs" asp-controller="Jobs" class="apply-now-button">My Jobs<i class="icon-material-outline-arrow-right-alt"></i></a>
+                        <a asp-action="MyJobs" asp-controller="Jobs" class="apply-now-button">Meus Trabalhos<i class="icon-material-outline-arrow-right-alt"></i></a>
                     }
                     else
                     {
@@ -114,7 +114,7 @@
                 <!-- Sidebar Widget -->
                 <div class="sidebar-widget">
                     <div class="job-overview">
-                        <div class="job-overview-headline">Job Summary</div>
+                        <div class="job-overview-headline">Resumo</div>
                         <div class="job-overview-inner">
                             <ul>
                                 @*<li>
@@ -124,18 +124,18 @@
                                 </li>*@
                                 <li>
                                     <i class="icon-material-outline-business-center"></i>
-                                    <span>Category</span>
+                                    <span>Categoria</span>
                                     <h5>@Model.CategoryName</h5>
                                 </li>
                                 <li>
                                     <i class="icon-material-outline-local-atm"></i>
-                                    <span>Budget</span>
-                                    <h5>$@Model.Budget.ToString("N2")</h5>
+                                    <span>Valor</span>
+                                    <h5>R$@Model.Budget.ToString("N2")</h5>
                                 </li>
                                 <li>
                                     <i class="icon-material-outline-access-time"></i>
-                                    <span>Date Posted</span>
-                                    <h5>@Model.DateFormatted</h5>
+                                    <span>Data Publicada</span>
+                                    <h5>@Model.CreatedOn</h5>
                                 </li>
                             </ul>
                         </div>
