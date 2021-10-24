@@ -25,7 +25,7 @@
 
                             <!-- Headline -->
                             <div class="headline">
-                                <h3><i class="icon-material-outline-supervisor-account"></i>@Model.Count() Ofertas Realizadas</h3>
+                                <h3><i class="icon-material-outline-supervisor-account"></i>Ofertas Realizadas: @Model.Count()</h3>
                             </div>
 
                             <div class="content">
@@ -53,7 +53,7 @@
                                                         <div class="freelancer-rating">
                                                             @if (offer.FreelancerRating == 0)
                                                             {
-                                                                <div class="company-not-rated" data-rating="@offer.FreelancerRating">Not rated</div>
+                                                                <div class="company-not-rated" data-rating="@offer.FreelancerRating">Sem Avaliação</div>
                                                             }
                                                             else
                                                             {
@@ -63,16 +63,16 @@
 
                                                         <!-- Bid Details -->
                                                         <ul class="dashboard-task-info bid-info">
-                                                            <li><strong>$@offer.FixedPrice</strong><span>Fixed Price</span></li>
-                                                            <li><strong>@offer.DeliveryDays Days</strong><span>Delivery Time</span></li>
+                                                            <li><strong>R$ @offer.FixedPrice.ToString("N2")</strong><span>Valor Proposto</span></li>
+                                                            @*<li><strong>@offer.DeliveryDays Days</strong><span>Delivery Time</span></li>*@
                                                         </ul>
 
                                                         <!-- Buttons -->
                                                         <div class="buttons-to-right d-flex always-visible margin-top-25 margin-bottom-0">
-                                                            <a href="#@(dialogNumber++)" class="popup-with-zoom-anim button ripple-effect margin-right-5"><i class="icon-material-outline-check"></i> Accept Offer</a>
+                                                            <a href="#@(dialogNumber++)" class="popup-with-zoom-anim button ripple-effect margin-right-5"><i class="icon-material-outline-check"></i> Aceitar </a>
                                                             <form method="post" id="delete-offer-form" asp-action="DeleteOffer" asp-controller="Offers">
                                                                 <input type="hidden" name="offerId" value="@offer.Id" />
-                                                                <button type="submit" form="delete-offer-form" class="button red ripple-effect ico" title="Delete Offer" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></button>
+                                                                <button type="submit" form="delete-offer-form" class="button red ripple-effect ico" title="Deletar" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></button>
                                                             </form>
                                                         </div>
 

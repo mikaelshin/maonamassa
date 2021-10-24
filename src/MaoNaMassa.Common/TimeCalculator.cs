@@ -11,47 +11,47 @@
 
             if (delta < 60)
             {
-                return ts.Seconds == 1 ? "one second ago" : ts.Seconds + " seconds ago";
+                return ts.Seconds == 1 ? "um segundo atrás" : ts.Seconds + " segundos atrás";
             }
 
             if (delta < 60 * 2)
             {
-                return "a minute ago";
+                return "um minuto atrás";
             }
 
             if (delta < 45 * 60)
             {
-                return ts.Minutes + " minutes ago";
+                return ts.Minutes + " minutos atrás";
             }
 
             if (delta < 90 * 60)
             {
-                return "an hour ago";
+                return "uma hora atrás";
             }
 
             if (delta < 24 * 60 * 60)
             {
-                return ts.Hours + " hours ago";
+                return ts.Hours + " horas atrás";
             }
 
             if (delta < 48 * 60 * 60)
             {
-                return "yesterday";
+                return "ontem";
             }
 
             if (delta < 30 * 24 * 60 * 60)
             {
-                return ts.Days + " days ago";
+                return ts.Days + " dias atrás";
             }
 
             if (delta < 12 * 30 * 24 * 60 * 60)
             {
                 int months = Convert.ToInt32(Math.Floor((double)ts.Days / 30));
-                return months <= 1 ? "one month ago" : months + " months ago";
+                return months <= 1 ? " um mês atrás" : months + " meses atrás";
             }
 
             int years = Convert.ToInt32(Math.Floor((double)ts.Days / 365));
-            return years <= 1 ? "one year ago" : years + " years ago";
+            return years <= 1 ? "um ano atrás" : years + " anos atrás";
         }
     }
 }

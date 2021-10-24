@@ -87,11 +87,11 @@
                     }
                     else if (Model.Status == JobStatus.Open && Model.OffersFreelancerIds.Contains(user.Id))
                     {
-                        <a role="button" class="apply-now-button bg-secondary text-white">Offer already sent</a>
+                        <a role="button" class="apply-now-button bg-secondary text-white">Oferta Enviada</a>
                     }
                     else
                     {
-                        <a role="button" class="apply-now-button bg-secondary text-white">Job is closed</a>
+                        <a role="button" class="apply-now-button bg-secondary text-white">Trabalho Fechado</a>
                     }
                 }
 
@@ -130,12 +130,12 @@
                                 <li>
                                     <i class="icon-material-outline-local-atm"></i>
                                     <span>Valor</span>
-                                    <h5>R$@Model.Budget.ToString("N2")</h5>
+                                    <h5>R$ @Model.Budget.ToString("N2")</h5>
                                 </li>
                                 <li>
                                     <i class="icon-material-outline-access-time"></i>
                                     <span>Data de Publicação</span>
-                                    <h5>@Model.CreatedOn</h5>
+                                    <h5>@Model.CreatedOn.ToShortDateString()</h5>
                                 </li>
                             </ul>
                         </div>

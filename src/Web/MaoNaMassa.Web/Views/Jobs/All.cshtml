@@ -89,8 +89,8 @@
                             <ul>
                                 <li>@*<i class="icon-material-outline-location-on"></i> @job.EmployerLocationToString*@</li>
                                 <li><i class="icon-material-outline-business-center"></i> @job.CategoryName</li>
-                                <li><i class="icon-material-outline-account-balance-wallet"></i> $@job.Budget.ToString("N0")</li>
-                                <li><i class="icon-material-outline-access-time"></i>Posted @job.TimeAgo</li>
+                                <li><i class="icon-material-outline-account-balance-wallet"></i> R$ @job.Budget.ToString("N2")</li>
+                                <li><i class="icon-material-outline-access-time"></i>@job.TimeAgo</li>
                             </ul>
                         </div>
                     </a>

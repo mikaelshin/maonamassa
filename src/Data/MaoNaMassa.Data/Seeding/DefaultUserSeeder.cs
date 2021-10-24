@@ -19,23 +19,23 @@
 
         private static async Task SeedDefaultUserAsync(ApplicationDbContext db, UserManager<ApplicationUser> userManager)
         {
-            if (userManager.FindByEmailAsync("admin@admin.com").Result == null)
-            {
-                var admin = new Administrator
-                {
-                    FirstName = "Stoyan",
-                    LastName = "Kostadinov",
-                    UserName = "tonsan1",
-                    Email = "admin@admin.com",
-                    //Location = Country.BG,
-                    ProfileImageUrl = "https://res.cloudinary.com/MaoNaMassa/image/upload/v1627979027/user-avatar-placeholder_kkhpst.png",
-                    PasswordHash = "AQAAAAEAACcQAAAAEDA3keU3XOYGRZfBy6pngk7PctiHTucDSZmw6f6gNHKes6pf7jhXeZiWVZftf1mR7Q==",
-                };
+            //if (userManager.FindByEmailAsync("admin@admin.com").Result == null)
+            //{
+            //    var admin = new Administrator
+            //    {
+            //        FirstName = "Mikael",
+            //        LastName = "Shin",
+            //        UserName = "mikaelshin",
+            //        Email = "admin@admin.com",
+            //        //Location = Country.BG,
+            //        ProfileImageUrl = "",
+            //        PasswordHash = "mikaelshin",
+            //    };
 
-                await db.Users.AddAsync(admin);
-                await db.SaveChangesAsync();
-                await userManager.AddToRoleAsync(admin, "Administrator");
-            }
+            //    await db.Users.AddAsync(admin);
+            //    await db.SaveChangesAsync();
+            //    await userManager.AddToRoleAsync(admin, "Administrator");
+            //}
         }
     }
 }
