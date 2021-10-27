@@ -48,45 +48,15 @@
 
                             @if (this.User.IsInRole("Freelancer"))
                             {
-                                @*<li>
-                                    <a href="#">Profile</a>
-                                    <ul class="dropdown-nav">
-                                        <li>
-                                            <a asp-action="Freelancer" asp-controller="Users" asp-route-id="@user.Id">My Profile</a>
-                                        </li>
-                                        <li>
-                                            <a asp-action="Settings" asp-controller="Users">Settings</a>
-                                        </li>
-                                    </ul>
-                                </li>*@
-
                                 <li>
                                     <a asp-action="Freelancer" asp-controller="Users" asp-route-id="@user.Id">Perfil</a>
                                 </li>
 
                                 //Comentando para próxima entrega
 
-                                @*<li> 
-                                    <a role="button">Offers</a>
-                                    <ul class="dropdown-nav">
-                                        <li>
-                                            <a asp-action="MyOffers" asp-controller="Offers">My Offers</a>
-                                        </li>
-                                    </ul>
-                                </li>*@
-
                                 <li>
                                     <a role="button" asp-action="MyOffers" asp-controller="Offers">Minhas Ofertas</a>
                                 </li>
-
-                                @*<li>
-                                    <a role="button">Contracts</a>
-                                    <ul class="dropdown-nav">
-                                        <li>
-                                            <a asp-action="MyContracts" asp-controller="Contracts">My Contracts</a>
-                                        </li>
-                                    </ul>
-                                </li>*@
 
                                 @*<li>
                                     <a role="button" asp-action="MyContracts" asp-controller="Contracts">Contratos</a>
@@ -111,30 +81,9 @@
 
                                 //Comentando para próxima entrega
 
-                                @*<li>
-                                    <a role="button">Profile</a>
-                                    <ul class="dropdown-nav">
-                                        <li>
-                                            <a asp-action="Employer" asp-controller="Users" asp-route-id="@user.Id">My Profile</a>
-                                        </li>
-                                        <li>
-                                            <a asp-action="Settings" asp-controller="Users">Settings</a>
-                                        </li>
-                                    </ul>
-                                </li>*@
-
                                 <li>
                                     <a role="button" asp-action="Employer" asp-controller="Users" asp-route-id="@user.Id">Perfil</a>
                                 </li>
-
-                                @*<li>
-                                    <a role="button">Contracts</a>
-                                    <ul class="dropdown-nav">
-                                        <li>
-                                            <a asp-action="MyContracts" asp-controller="Contracts">My Contracts</a>
-                                        </li>
-                                    </ul>
-                                </li>*@
 
                                 @*<li>
                                     <a asp-action="MyContracts" asp-controller="Contracts">Contratos</a>
@@ -153,8 +102,15 @@
                                     <a role="button" asp-action="AllFreelancers" asp-controller="Users">Buscar Freelancers</a>
                                 </li>*@
 
-                                
                                 <li>
+                                    <a asp-action="MyJobs" asp-controller="Jobs">Meus Trabalhos</a>
+                                </li>
+
+                                <li>
+                                    <a asp-action="AddJob" asp-controller="Jobs">Adicionar Trabalho</a>
+                                </li>
+
+                                @*<li>
                                     <a role="button">Trabalhos</a>
                                     <ul class="dropdown-nav">
                                         <li>
@@ -165,7 +121,7 @@
                                             <a asp-action="AddJob" asp-controller="Jobs">Adicionar Trabalho</a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li>*@
                             }
                         </ul>
                     </nav>
