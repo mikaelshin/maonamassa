@@ -6,7 +6,7 @@
     <div class="sign-in-form">
 
         <ul class="popup-tabs-nav">
-            <li><a href="#tab1">Complete Contract</a></li>
+            <li><a href="#tab1">Finalizar Contrato</a></li>
         </ul>
 
         <div class="popup-tabs-container">
@@ -16,7 +16,7 @@
 
                 <!-- Welcome Text -->
                 <div class="welcome-text">
-                    <h3>Are you sure you want to complete your contract with @Model.FreelancerFirstName @Model.FreelancerLastName?</h3>
+                    <h3>Você tem certeza que quer contratar o @Model.FreelancerFirstName @Model.FreelancerLastName?</h3>
                 </div>
 
                 <form id="complete-contract-form" asp-action="CompleteContract" asp-controller="Contracts">
@@ -25,7 +25,8 @@
                 </form>
 
                 <!-- Button -->
-                <button class="margin-top-15 button w-100 button-sliding-icon ripple-effect" type="submit" form="complete-contract-form">Complete <i class="icon-material-outline-arrow-right-alt"></i></button>
+                <button class="margin-top-15 button w-100 button-sliding-icon ripple-effect" type="submit" form="complete-contract-form">Sim! <i class="icon-material-outline-arrow-right-alt"></i></button>
+                @*<button type="submit" form="payment-form" class="button big ripple-effect margin-top-40 margin-bottom-65" id="submit" data-secret="@ViewData["ClientSecret"]">Sim! </button>*@
 
             </div>
         </div>

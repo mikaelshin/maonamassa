@@ -99,7 +99,7 @@
                 {
                     if (Model.Status == JobStatus.InContract && Model.EmployerId == user.Id)
                     {
-                        <a asp-action="Index" asp-controller="Contracts" asp-route-id="@Model.ContractId" class="apply-now-button">Contract<i class="icon-material-outline-arrow-right-alt"></i></a>
+                        <a asp-action="Index" asp-controller="Contracts" asp-route-id="@Model.ContractId" class="apply-now-button">Contrato<i class="icon-material-outline-arrow-right-alt"></i></a>
                     }
                     else if (Model.Status != JobStatus.InContract && Model.EmployerId == user.Id)
                     {
@@ -107,7 +107,7 @@
                     }
                     else
                     {
-                        <a role="button" class="apply-now-button bg-secondary text-white">Employers cannot apply to jobs</a>
+                        <a role="button" class="apply-now-button bg-secondary text-white">Empregadores não possuem permissão!</a>
                     }
                 }
 
