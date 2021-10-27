@@ -16,7 +16,7 @@
 
             <!-- Dashboard Headline -->
             <div class="dashboard-headline">
-                <h3>My Contracts</h3>
+                <h3>Meus Contratos</h3>
             </div>
 
             <!-- Row -->
@@ -28,7 +28,7 @@
 
                         <!-- Headline -->
                         <div class="headline">
-                            <h3><i class="icon-material-outline-assignment"></i> @contractsCount Contract Listings</h3>
+                            <h3><i class="icon-material-outline-assignment"></i> Meus Contratos: @contractsCount </h3>
                         </div>
 
                         <div class="content">
@@ -47,7 +47,7 @@
                                                 <!-- Details -->
                                                 <div class="job-listing-description">
 
-                                                    <h3 class="job-listing-title"><a asp-controller="Contracts" asp-action="Index" asp-route-id="@contract.Id">Contract #@contract.ShortId</a> <span class="dashboard-status-button @contract.TagColor">@contractStatus</span></h3>
+                                                    <h3 class="job-listing-title"><a asp-controller="Contracts" asp-action="Index" asp-route-id="@contract.Id">Contrato #@contract.ShortId</a> <span class="dashboard-status-button @contract.TagColor">@contractStatus</span></h3>
 
                                                     <!-- Job Listing Footer -->
                                                     <div class="job-listing-footer">
