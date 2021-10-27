@@ -18,7 +18,7 @@
         public DateTime CompletedOn { get; set; }
 
         public string CompletedOnFormatted
-            => this.CompletedOn > DateTime.MinValue ? this.CompletedOn.ToShortDateString() : "Present";
+            => this.CompletedOn > DateTime.MinValue ? this.CompletedOn.ToShortDateString() : "Presente";
 
         public string JobTitle { get; set; }
 
