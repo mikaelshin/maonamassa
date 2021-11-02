@@ -25,7 +25,7 @@
 
         public int OfferFixedPrice { get; set; }
 
-        public int OfferDeliveryDays { get; set; }
+        public int OfferDeliveryDays { get; set; } = 1;
 
         public string EmployerId { get; set; }
 
@@ -52,9 +52,9 @@
                                      this.StatusToString == "Ongoing" && this.TimeLeft <= 0 ? "bg-warning text-white" :
                                      this.StatusToString == "Canceled" ? "bg-danger text-white" : string.Empty;
 
-        public string StatusName => this.StatusToString == "Ongoing" && this.TimeLeft > 0 ? "Ongoing" :
-                                    this.StatusToString == "Ongoing" && this.TimeLeft < 0 ? "Expired" :
-                                    this.StatusToString == "Canceled" ? "Canceled" : "Finished";
+        public string StatusName => this.StatusToString == "Ongoing" && this.TimeLeft > 0 ? "Em andamento" :
+                                    this.StatusToString == "Ongoing" && this.TimeLeft < 0 ? "Expirado" :
+                                    this.StatusToString == "Canceled" ? "Cancelado" : "Finalizado";
 
         public List<AttachmentListViewModel> Attachments { get; set; }
     }
