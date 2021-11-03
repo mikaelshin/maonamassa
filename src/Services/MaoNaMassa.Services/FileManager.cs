@@ -60,7 +60,7 @@
 
                 var uploadResult = cloudinary.Upload(uploadParams);
 
-                var downloadableUrl = "https://res.cloudinary.com/MaoNaMassa/image/upload/h_300,w_300/fl_attachment/v" +
+                var downloadableUrl = "http://res.cloudinary.com/maonamassa/image/upload/v" +
                                       $"{uploadResult.Version}/{uploadResult.PublicId}.{uploadResult.Format}";
 
                 return downloadableUrl;

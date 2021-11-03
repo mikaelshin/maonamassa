@@ -53,14 +53,14 @@
                                 </li>
 
                                 //Comentando para próxima entrega
+                                <li>
+                                    <a asp-controller="Jobs" asp-action="All">Encontrar Trabalhos</a>
+                                </li>
 
                                 <li>
                                     <a role="button" asp-action="MyOffers" asp-controller="Offers">Minhas Ofertas</a>
                                 </li>
 
-                                @*<li>
-                                    <a role="button" asp-action="MyContracts" asp-controller="Contracts">Contratos</a>
-                                </li>*@
 
                                 
                                 @*<li>
@@ -72,9 +72,9 @@
                                     </ul>
                                 </li>*@
 
-                                <li>
-                                    <a asp-controller="Jobs" asp-action="All">Encontrar Trabalhos</a>
-                                </li>
+                                @*<li>
+                                    <a role="button" asp-action="MyContracts" asp-controller="Contracts">Meus Contratos</a>
+                                </li>*@
                             }
                             @if (this.User.IsInRole("Employer"))
                             {
@@ -85,9 +85,6 @@
                                     <a role="button" asp-action="Employer" asp-controller="Users" asp-route-id="@user.Id">Perfil</a>
                                 </li>
 
-                                @*<li>
-                                    <a asp-action="MyContracts" asp-controller="Contracts">Contratos</a>
-                                </li>*@
 
                                 @*<li>
                                     <a role="button">Find Talent</a>
@@ -103,12 +100,16 @@
                                 </li>*@
 
                                 <li>
-                                    <a asp-action="MyJobs" asp-controller="Jobs">Meus Trabalhos</a>
+                                    <a asp-action="AddJob" asp-controller="Jobs">Adicionar Trabalho</a>
                                 </li>
 
                                 <li>
-                                    <a asp-action="AddJob" asp-controller="Jobs">Adicionar Trabalho</a>
+                                    <a asp-action="MyJobs" asp-controller="Jobs">Meus Trabalhos</a>
                                 </li>
+
+                                @*<li>
+                                    <a asp-action="MyContracts" asp-controller="Contracts">Meus Contratos</a>
+                                </li>*@
 
                                 @*<li>
                                     <a role="button">Trabalhos</a>

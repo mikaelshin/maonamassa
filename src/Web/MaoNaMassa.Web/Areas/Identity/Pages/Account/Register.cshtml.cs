@@ -134,7 +134,7 @@
                 user.UserName = this.Input.Username;
                 user.Email = this.Input.Email;
                 user.Location = 0;
-                user.ProfileImageUrl = "https://res.cloudinary.com/Jobzy/image/upload/v1627979027/user-avatar-placeholder_kkhpst.png";
+                user.ProfileImageUrl = "https://res.cloudinary.com/maonamassa/image/upload/v1627979027/user-avatar-placeholder_kkhpst.png";
 
                 var result = await this.userManager.CreateAsync(user, this.Input.Password);
 

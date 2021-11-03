@@ -35,7 +35,8 @@
                             <ul class="dashboard-box-list">
                                 @foreach (var contract in Model)
                                 {
-                                    var contractStatus = contract.StatusToString == "Ongoing" && contract.TimeLeft < 0 ? "Expired" : contract.StatusToString;
+                                    //var contractStatus = contract.StatusToString == "Ongoing" && contract.TimeLeft < 0 ? "Expirado" : contract.StatusToString;
+                                    var contractStatus = contract.StatusToString == "Ongoing" ? "Em Andamento" : contract.StatusToString;
 
                                     <li>
                                         <!-- Job Listing -->
@@ -61,17 +62,17 @@
 
                                         <!-- Task Details -->
                                         <ul class="dashboard-task-info">
-                                            <li><strong>@contract.OfferDeliveryDays</strong><span>Delivery Days</span></li>
-                                            <li><strong>$@contract.OfferFixedPrice</strong><span>Budget</span></li>
+                                            @*<li><strong>@contract.OfferDeliveryDays</strong><span>Delivery Days</span></li>*@
+                                            <li><strong>R$ @contract.OfferFixedPrice.ToString("N2")</strong><span>Valor Acordado</span></li>
 
-                                            @if (contract.TimeLeft > 0)
+                                            @*@if (contract.TimeLeft > 0)
                                             {
                                                 <li><strong>@contract.TimeLeft</strong><span>Days left</span></li>
                                             }
                                             @if (contract.TimeLeft <= 0)
                                             {
                                                 <li><strong>0</strong><span>Days left</span></li>
-                                            }
+                                            }*@
                                         </ul>
                                     </li>
                                 }

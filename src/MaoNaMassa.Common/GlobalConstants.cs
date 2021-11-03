@@ -26,7 +26,7 @@
         public const string JobIcon = "icon-material-outline-business-center";
 
         // Cloudinary setup
-        public const string CloudinaryApiKey = "239537293495227";
-        public const string CloudinaryApiSecretKey = "cPHTXZ86-9xLH7UkZccX4_XnlFw";
+        public const string CloudinaryApiKey = "954714118951225";
+        public const string CloudinaryApiSecretKey = "z87OS5NGxXULjddWafvWRXe2B2Y";
     }
 }

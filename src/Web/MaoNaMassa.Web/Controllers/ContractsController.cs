@@ -94,7 +94,7 @@
         }
 
         [HttpPost]
-        [Authorize(Roles = "Freelancer")]
+        [Authorize(Roles = "Employer, Freelancer")]
         public async Task<IActionResult> UploadWork([FromForm] IFormFile attachment, string contractId)
         {
             await this.freelancePlatform.FileManager.AddFileToContractAsync(attachment, contractId);
