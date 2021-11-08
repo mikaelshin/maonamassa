@@ -23,15 +23,16 @@
                     <!-- Upload Button -->
                     <div class="uploadButton margin-top-0">
                         <input class="uploadButton-input" name="attachment" type="file" accept="image/*, application/pdf" id="upload" multiple />
-                        <label class="uploadButton-button ripple-effect" for="upload">Procurar Arquivo</label>
+                        <label class="uploadButton-button ripple-effect margin-bottom-15" for="upload">Procurar Arquivo</label>
                     </div>
 
-                    <input hidden name="contractId" value="@Model.Id"/>
+                    <input hidden name="contractId" value="@Model.Id" />
 
                 </form>
 
                 <!-- Button -->
-                <button class="margin-top-15 button w-100 button-sliding-icon ripple-effect" type="submit" form="upload-work-form">Enviar <i class="icon-material-outline-arrow-right-alt"></i></button>
+                @*<button class="margin-top-15 button w-100 button-sliding-icon ripple-effect" type="submit" form="upload-work-form">Enviar <i class="icon-material-outline-arrow-right-alt"></i></button>*@
+                <a href="#wait-warning" class="button popup-with-zoom-anim apply-now-button ripple-effect move-on-hover full-width margin-bottom-20"><span>Enviar</span></a>
 
             </div>
         </div>
@@ -55,9 +56,10 @@
 
                 <!-- Welcome Text -->
                 <div class="welcome-text">
-                    <h3>Nossa equipe irá validar o contrato assinado.</h3>
+                    <h3>Seu documento assinado será analisado por nossa equipe. <br> <br>Dentro de algumas horas, retornaremos e logo poderá pôr a mão na massa!</h3>
                 </div>
 
+                <button class="margin-top-15 button w-100 button-sliding-icon ripple-effect" type="submit" form="upload-work-form">Enviar <i class="icon-material-outline-arrow-right-alt"></i></button>
             </div>
         </div>
     </div>
