@@ -36,7 +36,7 @@
                                 @foreach (var contract in Model)
                                 {
                                     //var contractStatus = contract.StatusToString == "Ongoing" && contract.TimeLeft < 0 ? "Expirado" : contract.StatusToString;
-                                    var contractStatus = contract.StatusToString == "Ongoing" ? "Em Andamento" : contract.StatusToString;
+                                    var contractStatus = contract.StatusToString == "Ongoing" ? "Em andamento" : contract.StatusToString == "Canceled" ? "Cancelado" : "Finalizado";
 
                                     <li>
                                         <!-- Job Listing -->

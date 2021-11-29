@@ -94,12 +94,28 @@
         }
 
         [HttpPost]
+        [Authorize(Roles = "Employer")]
+        public async Task<IActionResult> FinishContract(string contractId)
+        {
+            if (contractId is null)
+            {
+                return this.View("Error");
+            }
+
+            await this.freelancePlatform.ContractManager.SetContractStatusAsync(ContractStatus.Finished, contractId);
+
+            return this.RedirectToAction("MyContracts", "Contracts");
+        }
+
+        [HttpPost]
         [Authorize(Roles = "Employer, Freelancer")]
         public async Task<IActionResult> UploadWork([FromForm] IFormFile attachment, string contractId)
         {
             await this.freelancePlatform.FileManager.AddFileToContractAsync(attachment, contractId);
             var contract = await this.freelancePlatform.ContractManager
                 .GetContractByIdAsync<SingleContractViewModel>(contractId);
+            if (this.User.IsInRole("Employer"))
+                await this.freelancePlatform.ContractManager.SetContractStatusAsync(ContractStatus.Finished, contractId);
 
             var notification = new Notification
             {

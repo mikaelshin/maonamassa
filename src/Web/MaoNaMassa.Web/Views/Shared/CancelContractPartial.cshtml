@@ -18,15 +18,14 @@
                 <div class="welcome-text">
                     <h3>Você tem certeza que quer cancelar o contrato com o <br />@Model.FreelancerFirstName @Model.FreelancerLastName?</h3>
                 </div>
-
+                
                 <form id="cancel-contract-form" asp-action="CancelContract" asp-controller="Contracts">
                     <input type="text" hidden name="action" value="cancel" />
                     <input type="text" hidden name="contractId" value="@Model.Id" />
                 </form>
 
                 <!-- Button -->
-                @*<button class="margin-top-15 button w-100 button-sliding-icon bg-danger ripple-effect" type="submit" form="cancel-contract-form">Cancelar <i class="icon-material-outline-arrow-right-alt"></i></button>*@
-                <button class="margin-top-15 button w-100 button-sliding-icon bg-danger ripple-effect" >Cancelar <i class="icon-material-outline-arrow-right-alt"></i></button>
+                <button class="margin-top-15 button w-100 button-sliding-icon bg-danger ripple-effect" type="submit" form="cancel-contract-form">Cancelar <i class="icon-material-outline-arrow-right-alt"></i></button>
 
             </div>
         </div>
