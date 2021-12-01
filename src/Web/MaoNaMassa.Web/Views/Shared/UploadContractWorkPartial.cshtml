@@ -54,16 +54,19 @@
             <!-- Tab -->
             <div class="popup-tab-content" id="tab">
 
-                <!-- Welcome Text -->
-                <div class="welcome-text">
-                    <h3>Seu documento assinado será analisado por nossa equipe. <br> <br>Dentro de algumas horas, retornaremos e logo poderá pôr a mão na massa!</h3>
-                </div>
+                
 
                  @if (this.User.IsInRole("Employer"))
                  {
-                    <form id="upload-contract-form" asp-action="FinishContract" asp-controller="Contracts">
-                        <input type="text" hidden name="contractId" value="@Model.Id" />
-                    </form>
+                    <div class="welcome-text">
+                        <h3>Parabéns! Seu documento foi entregue. <br> <br>Espere a submissão do contrato por parte do Freelancer para que você receba o trabalho.</h3>
+                    </div>
+                 } 
+                 else
+                 {
+                     <div class="welcome-text">
+                         <h3>Parabéns! <br> <br> Agora, você poderá pôr a mão na massa!</h3>
+                    </div>
                  }
 
                 <button class="margin-top-15 button w-100 button-sliding-icon ripple-effect" type="submit" form="upload-work-form">Confirmar <i class="icon-material-outline-arrow-right-alt"></i></button>

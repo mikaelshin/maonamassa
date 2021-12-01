@@ -114,8 +114,11 @@
             await this.freelancePlatform.FileManager.AddFileToContractAsync(attachment, contractId);
             var contract = await this.freelancePlatform.ContractManager
                 .GetContractByIdAsync<SingleContractViewModel>(contractId);
-            if (this.User.IsInRole("Employer"))
+            if (this.User.IsInRole("Freelancer"))
+            {
                 await this.freelancePlatform.ContractManager.SetContractStatusAsync(ContractStatus.Finished, contractId);
+                await this.freelancePlatform.JobManager.SetJobStatusAsync(JobStatus.Closed, contractId);
+            }
 
             var notification = new Notification
             {
